@@ -1,22 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './Home';
-import ContactUs from './ContactUs';
+import { BookProvider } from './components/models/context/BookContext';
+import BookList from './components/BookList';
+import AddBook from './components/AddBook'; // nëse ke formën për të shtuar libra
 
-function App() {
+const App: React.FC = () => {
   return (
-    <Router>
-      <div className="App">
-        <nav>
-          <Link to="/">Home</Link> | <Link to="/contact">Contact Us</Link>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<ContactUs />} />
-        </Routes>
+    <BookProvider>
+      <div>
+        <h1>Libra</h1>
+        <AddBook />       {/* Kjo nëse do të shtosh libra për test */}
+        <BookList />      {/* Kjo shfaq librat e futur */}
       </div>
-    </Router>
+    </BookProvider>
   );
-}
+};
 
 export default App;

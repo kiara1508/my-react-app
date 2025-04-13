@@ -1,0 +1,13 @@
+.bookCard {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .unavailable {
+    background-color: #ffe6e6;
+    opacity: 0.6;
+  }
+  
